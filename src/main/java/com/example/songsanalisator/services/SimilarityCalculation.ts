@@ -11,7 +11,7 @@ export class SimilarityCalculation{
         const matrix = Array.from({length: song.length}, () => Array(song.length).fill(0));
         for ( let i = 0; i < song.length; i++){
             for (let j = i + 1; j<song.length; j++){
-                const similarity = this.cousinesSimilary(song[i].features, song[j].features);
+                const similarity = this.cousinesSimilary(song[i].TIDALPopularity, song[j].TIDALPopularity);
                 matrix[i][j] = similarity;
                 matrix[j][i] = similarity;
             }
