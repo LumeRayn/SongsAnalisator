@@ -15,7 +15,7 @@ export class SimilarityMap {
 
         try {
             const csvLoader = new CsvLoaderService(); // Создаем экземпляр класса
-            this.songs = await csvLoader.loadData('path/to/your/csvfile.csv'); // Вызываем метод loadData
+            this.songs = await csvLoader.loadData('path/##/##/Most Streamed Spotify Songs 2024'); // Вызываем метод loadData
             const similarityMatrix = SimilarityCalculation.calculatedSimilarityMatrix(this.songs);
             this.render(this.songs, similarityMatrix);
         } catch (error) {
